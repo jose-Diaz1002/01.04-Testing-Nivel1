@@ -1,5 +1,4 @@
 package level1;
-
 import java.util.*;
 
 public class Library {
@@ -8,21 +7,16 @@ public class Library {
     public Library() {
         this.books = new ArrayList<>();
     }
-
-    //agregar libros
     public void addBook(String title) {
         if (!books.contains(title)) {
             books.add(title);
-            Collections.sort(books);// Mantiene el orden alfabético
+            Collections.sort(books);
         }
     }
-
-    // Obtener la lista completa de libros
     public List<String> getBooks() {
         return books;
     }
 
-    // Obtener un libro en una posición específica
     public String getBookByPosition(int posicion) {
         if (posicion >= 0 && posicion < books.size()) {
             return books.get(posicion);
@@ -32,17 +26,15 @@ public class Library {
         }
     }
 
-    // Insertar un libro en una posición específica
     public boolean insertBookIntoPosition(int posicion, String titulo) {
         if (!books.contains(titulo) && posicion >= 0 && posicion <= books.size()) {
             books.add(posicion, titulo);
-            Collections.sort(books); // Mantener ordenado
+            Collections.sort(books);
             return true;
         }
         return false;
     }
 
-    // Eliminar un libro por su título
     public boolean deleteBook(String titulo) {
         return books.remove(titulo);
     }

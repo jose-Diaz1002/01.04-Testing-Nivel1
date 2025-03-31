@@ -1,10 +1,11 @@
 package level1Test;
 
 import level1.Library;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LibraryTest {
@@ -12,7 +13,7 @@ public class LibraryTest {
     private Library library;
 
     @BeforeEach
-    public void init(){
+    public void init() {
         this.library = new Library();
     }
 
@@ -90,7 +91,6 @@ public class LibraryTest {
     }
 
     @Test
-    //6 Aseguran que añadir un libro modifica correctamente la lista.
     public void testInsertBookIntoPosition2() {
         //Given
         library.addBook("Meditaciones");
@@ -106,7 +106,6 @@ public class LibraryTest {
     }
 
     @Test
-    //7 Confirman que eliminar un libro disminuye el tamaño de la lista.
     public void testDeleteBook() {
         //Given
         library.addBook("Meditaciones");
@@ -121,8 +120,6 @@ public class LibraryTest {
     }
 
     @Test
-    //8 Verifican que la lista permanece ordenada alfabéticamente después
-    // de añadir o eliminar un libro.
     public void testSortAlphabetically() {
         //Given
         library.addBook("Meditaciones");
